@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff0099, #493240, #00dbde, #fc00ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero {
+    padding: 100px 20px;
+}
+
+.unicorn {
+    width: 150px;
+    margin: 20px auto;
+}
+
+.explore-btn {
+    background: #ff0099;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.explore-btn:hover {
+    background: #fc00ff;
+}
