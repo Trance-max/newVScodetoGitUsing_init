@@ -1,4 +1,8 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Force TensorFlow to use CPU only
+
 import streamlit as st
+
 import json
 import random
 import numpy as np
@@ -7,15 +11,15 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 
 # Load data
-with open("intents.json", "r") as file:
+with open("intents.json", "r", encoding="utf-8") as file:
     intents = json.load(file)
 
 lemmatizer = WordNetLemmatizer()
 model = tf.keras.models.load_model("chatbot_model.h5")
 
-with open("words.json", "r") as file:
+with open("words.json", "r", encoding="utf-8") as file:
     words = json.load(file)
-with open("classes.json", "r") as file:
+with open("classes.json", "r", encoding="utf-8") as file:
     classes = json.load(file)
 
 # Preprocessing
